@@ -1,0 +1,36 @@
+.form {
+  width: 300px;
+  height: 2rem;
+}
+
+.boxInput {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: #fff;
+}
+
+.btn,
+.input {
+  border: none;
+  outline: none;
+}
+
+.btn {
+  height: inherit;
+  background-color: #09f;
+}
+
+.input {
+  background-color: #fff;
+  color: #242424;
+  width: 100%;
+  height: inherit;
+  padding-inline: 1em;
+}
+
+.input::placeholder {
+  color: #ccc;
+}
