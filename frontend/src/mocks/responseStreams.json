@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "id": "46766300956",
+      "user_id": "523784924",
+      "user_login": "belenjurado",
+      "user_name": "BelenJurado",
+      "game_id": "26936",
+      "game_name": "Music",
+      "type": "live",
+      "title": "🎉JUERNESSSSSS 🎉 !redes",
+      "viewer_count": 1009,
+      "started_at": "2023-04-06T17:19:14Z",
+      "language": "es",
+      "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_belenjurado-{width}x{height}.jpg",
+      "tag_ids": [],
+      "tags": [
+        "Eventosmusicales",
+        "Canto",
+        "Músicos",
+        "DJ",
+        "Singer",
+        "music",
+        "Musicaelectronica",
+        "Español"
+      ],
+      "is_mature": false
+    }
+  ],
+  "pagination": {
+    "cursor": "eyJiIjp7IkN1cnNvciI6ImV5SnpJam94TURBNUxqVXpNakV6TURNMk1qZ3lNamNzSW1RaU9tWmhiSE5sTENKMElqcDBjblZsZlE9PSJ9LCJhIjp7IkN1cnNvciI6IiJ9fQ"
+  }
+}

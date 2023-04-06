@@ -5,9 +5,11 @@ import { isChannelLive } from '../services/isChannelLive'
 function Chat ({ channel }) {
   const [messages, setMessages] = useState([])
 
-  useEffect(() => {
+  /* useEffect(() => {
     isChannelLive({ channel })
-  }, [channel])
+      .then(response => console.info(response))
+      .catch(console.error)
+  }, [channel]) */
 
   return (
     <article>

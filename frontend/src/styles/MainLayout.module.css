@@ -1,5 +1,11 @@
+main {
+  border: 2px solid transparent;
+  padding: 1rem;
+  border-image: linear-gradient(to bottom right, #38BDF8, #38bdf833) 1;
+}
+
+
 .container {
-  box-shadow: #00000029 0px 1px 4px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
@@ -7,4 +13,7 @@
   min-height: 600px;
 }
 
-.titleApp {}
+.titleApp {
+  font-size: 2.4em;
+  color: #38BDF8;
+}
