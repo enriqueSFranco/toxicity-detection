@@ -6,7 +6,7 @@ function Tags ({ listOfTags }) {
     <ul className={styles.tagList}>
       {listOfTags.map(tag => (
         <li key={`tag-id-${tag}`}>
-          <Chip text={tag} />
+          <Chip text={`#${tag}`} />
         </li>
       ))}
     </ul>

@@ -1,5 +1,6 @@
 import { useSearchContext } from './hooks/useSearchContext'
 import MainLayout from './layout/MainLayout'
+import DetailsLayout from './layout/DetailsLayout'
 import Form from './components/Form'
 import Chat from './components/Chat'
 import isChannelLive from './mocks/responseStreams.json'
@@ -15,11 +16,17 @@ function App () {
   return (
     <div className='App'>
       <MainLayout>
-        <div>
+        <DetailsLayout>
           <Form />
+          <ul>
+            <li>
+              <span>username: {data.user_name}</span>
+            </li>
+            <li><span>Titulo del stream: {data.title}</span></li>
+            <li><span>Total de espectadores: {data.viewer_count}</span></li>
+          </ul>
           <Tags listOfTags={data.tags} />
-
-        </div>
+        </DetailsLayout>
         <Chat channel={query} />
       </MainLayout>
       <Footer />
