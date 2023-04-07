@@ -1,11 +1,16 @@
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { useSearchContext } from '../hooks/useSearchContext'
 import Loader from './Loader'
 import styles from '../styles/Form.module.css'
 
 function Form () {
   const previusSearch = useRef(null)
+  const inputRef = useRef(null)
   const { setQuery } = useSearchContext()
+
+  useEffect(() => {
+    inputRef.current.focus()
+  }, [])
 
   function handleSubmit (e) {
     e.preventDefault()
@@ -23,7 +28,9 @@ function Form () {
     <form onSubmit={handleSubmit} className={styles.form}>
       <div className={styles.boxInput}>
         <input
+          ref={inputRef}
           type='search'
+          autoComplete='off'
           id='channel'
           name='channel'
           placeholder='Buscar canal de twitch'
