@@ -7,11 +7,11 @@ import styles from '../styles/Chat.module.css'
 function Chat ({ channel }) {
   const [messages, setMessages] = useState([])
 
-  /* useEffect(() => {
+  useEffect(() => {
     isChannelLive({ channel })
       .then(response => console.info(response))
       .catch(console.error)
-  }, [channel]) */
+  }, [channel])
 
   return (
     <article className={styles.containerChat}>
