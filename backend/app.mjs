@@ -17,7 +17,16 @@ app.use(cors()) // hacemos uso de las cors, para evitar el error de origen cruza
 const httpServer = http.createServer(app)
 const io = new Server(httpServer)
 
-twitch({ io })
+
+
+app.get('/connect', (req, res) => {
+  const { channel } = req.query;
+
+  // Conectarse al canal de Twitch
+  twitch({ io, channel });
+
+  res.send(`Conectado al canal ${channel}`);
+});
 
 // Iniciar el servidor y escuchar solicitudes
 httpServer.listen(PORT, () => {
