@@ -21,7 +21,6 @@ export async function isChannelLive ({ channel }) {
       throw error
     }
     const json = await response.json()
-    console.log(json)
     return json
   } catch (error) {
 

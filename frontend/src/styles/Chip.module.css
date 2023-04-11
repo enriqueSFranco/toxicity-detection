@@ -4,3 +4,8 @@
   color: #38BDF8;
   border-radius: .3em;
 }
+
+.skeletonChip {
+  padding: .5rem .8rem;
+  background-color: #38bdf833;
+}
