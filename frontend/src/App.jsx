@@ -8,13 +8,14 @@ import Footer from './components/Footer'
 import './App.css'
 
 function App () {
-  const { response, loading } = useChannelContext()
+  const { response: streamData, error, loading } = useChannelContext()
+  console.log('her', error)
   return (
     <div className='App'>
       <MainLayout>
         <DetailsLayout>
           <Form />
-          <StreamInfo response={response} loading={loading} />
+          <StreamInfo response={streamData} loading={loading} />
         </DetailsLayout>
         <Chat />
       </MainLayout>

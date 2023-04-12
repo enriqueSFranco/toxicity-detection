@@ -1,7 +1,6 @@
 import styles from '../styles/StreamHeader.module.css'
 
 function StreamHeader ({ response, loading }) {
-  console.log(response)
   if (response.length === 0) return null
 
   if (loading) {

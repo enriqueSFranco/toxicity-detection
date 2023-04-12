@@ -23,6 +23,8 @@ export async function isChannelLive ({ channel }) {
     const json = await response.json()
     return json
   } catch (error) {
-
+    if (error.status === 400) {
+      throw new Error(`El canal ${channel} no existe`)
+    }
   }
 }
