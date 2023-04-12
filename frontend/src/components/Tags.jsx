@@ -1,7 +1,7 @@
 import styles from '../styles/Tags.module.css'
 import Chip from './Chip'
 
-function Tags ({ listOfTags, loading }) {
+function Tags ({ data, loading }) {
   if (loading) {
     return (
       <ul className={styles.tagList}>
@@ -15,9 +15,9 @@ function Tags ({ listOfTags, loading }) {
   }
   return (
     <ul className={styles.tagList}>
-      {listOfTags.map(tag => (
+      {data.map(tag => (
         <li key={`tag-id-${tag}`}>
-          <Chip text={`#${tag}`} />
+          <Chip text={tag} />
         </li>
       ))}
     </ul>

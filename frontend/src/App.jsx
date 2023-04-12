@@ -3,31 +3,18 @@ import MainLayout from './layout/MainLayout'
 import DetailsLayout from './layout/DetailsLayout'
 import Form from './components/Form'
 import Chat from './components/Chat'
-import Tags from './components/Tags'
+import StreamInfo from './components/StreamInfo'
 import Footer from './components/Footer'
 import './App.css'
 
 function App () {
-  const { data, loading } = useChannelContext()
-
-  if (!data) {
-    return <div>cargando</div>
-  }
-
-  console.log(data.data[0].tags)
+  const { response, loading } = useChannelContext()
   return (
     <div className='App'>
       <MainLayout>
         <DetailsLayout>
           <Form />
-          <ul>
-            <li>
-              <span>username: {data.user_name}</span>
-            </li>
-            <li><span>Titulo del stream: {data.title}</span></li>
-            <li><span>Total de espectadores: {data.viewer_count}</span></li>
-          </ul>
-          {data && <Tags listOfTags={data.data[0].tags} loading={loading} />}
+          <StreamInfo response={response} loading={loading} />
         </DetailsLayout>
         <Chat />
       </MainLayout>

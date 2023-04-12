@@ -36,7 +36,7 @@ function Form () {
           placeholder='Buscar canal de twitch'
           className={styles.input}
         />
-        <button className={styles.btn}>{!loading ? <Loader /> : <span>Buscar</span>}</button>
+        <button className={styles.btn}>{loading ? <Loader /> : <span>Buscar</span>}</button>
       </div>
     </form>
 
