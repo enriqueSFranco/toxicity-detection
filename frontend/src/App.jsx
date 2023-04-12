@@ -1,33 +1,22 @@
-import { useSearchContext } from './hooks/useSearchContext'
+import { useChannelContext } from './hooks/useChannelContext'
 import MainLayout from './layout/MainLayout'
 import DetailsLayout from './layout/DetailsLayout'
 import Form from './components/Form'
 import Chat from './components/Chat'
-import isChannelLive from './mocks/responseStreams.json'
-import Tags from './components/Tags'
+import StreamInfo from './components/StreamInfo'
 import Footer from './components/Footer'
 import './App.css'
 
-const data = isChannelLive.data[0]
-
 function App () {
-  const { query } = useSearchContext()
-
+  const { response, loading } = useChannelContext()
   return (
     <div className='App'>
       <MainLayout>
         <DetailsLayout>
           <Form />
-          <ul>
-            <li>
-              <span>username: {data.user_name}</span>
-            </li>
-            <li><span>Titulo del stream: {data.title}</span></li>
-            <li><span>Total de espectadores: {data.viewer_count}</span></li>
-          </ul>
-          <Tags listOfTags={data.tags} />
+          <StreamInfo response={response} loading={loading} />
         </DetailsLayout>
-        <Chat channel={query} />
+        <Chat />
       </MainLayout>
       <Footer />
     </div>

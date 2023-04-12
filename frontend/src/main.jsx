@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import { SearchProvider } from './context/searchContext'
 import './index.css'
+import { ChannelProvider } from './context/channelContext'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <SearchProvider>
+    <ChannelProvider>
       <App />
-    </SearchProvider>
+    </ChannelProvider>
   </React.StrictMode>
 )

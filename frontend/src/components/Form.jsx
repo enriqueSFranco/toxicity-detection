@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react'
-import { useSearchContext } from '../hooks/useSearchContext'
+import { useChannelContext } from '../hooks/useChannelContext'
 import Loader from './Loader'
 import styles from '../styles/Form.module.css'
 
 function Form () {
   const previusSearch = useRef(null)
   const inputRef = useRef(null)
-  const { setQuery } = useSearchContext()
+  const { loading, checkLiveChannel } = useChannelContext()
 
   useEffect(() => {
     inputRef.current.focus()
@@ -20,8 +20,8 @@ function Form () {
 
     if (previusSearch.current === channel) return
 
-    setQuery(channel)
     previusSearch.current = channel
+    checkLiveChannel(channel)
   }
 
   return (
@@ -36,8 +36,7 @@ function Form () {
           placeholder='Buscar canal de twitch'
           className={styles.input}
         />
-        <button className={styles.btn}>Buscar</button>
-        {/* <Loader /> */}
+        <button className={styles.btn}>{loading ? <Loader /> : <span>Buscar</span>}</button>
       </div>
     </form>
 
