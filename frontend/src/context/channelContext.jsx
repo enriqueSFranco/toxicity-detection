@@ -5,23 +5,24 @@ export const ChannelContext = createContext()
 
 export function ChannelProvider ({ children }) {
   const [response, setResponse] = useState([])
-  const [error, setError] = useState({})
+  const [error, setError] = useState(null)
   const [loading, setLoading] = useState(false)
 
   function checkLiveChannel (channel) {
-    return isChannelLive({ channel })
+    setLoading(true)
+    isChannelLive({ channel })
       .then(response => {
-        setLoading(true)
         setResponse(response)
+        setError(null)
       })
       .catch((error) => {
-        setError(error)
+        setError(error.message)
         setResponse(null)
       })
       .finally(() => setLoading(false))
   }
 
-  const value = { response, error, loading, setResponse, checkLiveChannel }
+  const value = { response, error, loading, checkLiveChannel }
   return (
     <ChannelContext.Provider value={value}>
       {children}
