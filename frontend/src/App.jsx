@@ -1,4 +1,3 @@
-import { useChannelContext } from './hooks/useChannelContext'
 import MainLayout from './layout/MainLayout'
 import DetailsLayout from './layout/DetailsLayout'
 import Form from './components/Form'
@@ -8,13 +7,12 @@ import Footer from './components/Footer'
 import './App.css'
 
 function App () {
-  const { response, loading } = useChannelContext()
   return (
     <div className='App'>
       <MainLayout>
         <DetailsLayout>
           <Form />
-          <StreamInfo response={response} loading={loading} />
+          <StreamInfo />
         </DetailsLayout>
         <Chat />
       </MainLayout>
