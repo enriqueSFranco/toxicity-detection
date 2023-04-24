@@ -10,7 +10,7 @@
   justify-content: space-between;
   gap: 1rem;
   background-color: #fff;
-  border-radius: 2rem;
+  border-radius: .2rem;
   overflow: hidden;
 }
 
@@ -23,7 +23,7 @@
 .btn {
   width: 120px;
   height: inherit;
-  background-color: #09f;
+  background-color: #38BDF8;
   color: #fff;
   cursor: pointer;
 }

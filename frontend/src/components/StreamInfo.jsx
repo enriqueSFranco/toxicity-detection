@@ -6,8 +6,6 @@ import styles from '../styles/StreamInfo.module.css'
 function StreamInfo () {
   const { response: streamData, error, loading } = useChannelContext()
 
-  if (!streamData) return null
-
   if (error) {
     return (
       <div>
@@ -16,15 +14,17 @@ function StreamInfo () {
     )
   }
 
-  if (!loading) {
+  if (loading) {
     return (
       <SkeletonStreamInfo />
     )
   }
 
-  const { data } = streamData
-  const { tags, user_name: username, thumbnail_url: thumbnail, title } = data[0]
+  if (!streamData || streamData.length === 0) return null
 
+  const { data } = streamData
+
+  const { tags, user_name: username, thumbnail_url: thumbnail, title } = data[0]
   const thumbnailURL = thumbnail.replace('{width}', '200').replace('{height}', '200')
 
   return (
