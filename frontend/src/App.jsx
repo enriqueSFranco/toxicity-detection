@@ -1,3 +1,4 @@
+import { ChannelProvider } from './context/channelContext'
 import MainLayout from './layout/MainLayout'
 import DetailsLayout from './layout/DetailsLayout'
 import Form from './components/Form'
@@ -9,11 +10,13 @@ function App () {
   return (
     <div className='h-full w-screen flex flex-col justify-between gap-4 p-10'>
       <MainLayout>
-        <DetailsLayout>
-          <Form />
-          <StreamInfo />
-        </DetailsLayout>
-        <Chat />
+        <ChannelProvider>
+          <DetailsLayout>
+            <Form />
+            <StreamInfo />
+          </DetailsLayout>
+          <Chat />
+        </ChannelProvider>
       </MainLayout>
       <Footer />
     </div>

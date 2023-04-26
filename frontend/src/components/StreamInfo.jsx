@@ -13,7 +13,7 @@ function StreamInfo () {
     )
   }
 
-  if (!loading) {
+  if (loading) {
     return (
       <SkeletonStreamInfo />
     )
@@ -24,17 +24,17 @@ function StreamInfo () {
   const { data } = streamData
 
   const { tags, user_name: username, thumbnail_url: thumbnail, title } = data[0]
-  const thumbnailURL = thumbnail.replace('{width}', '200').replace('{height}', '200')
+  const thumbnailURL = thumbnail.replace('{width}', '1080').replace('{height}', '1080')
 
   return (
     <section className='my-4 w-full h-full'>
-      <figure className='flex flex-col'>
-        <div className='w-full h-56'>
-          <img src={thumbnailURL} alt={title} className='object-cover object-center rounded-sm ' />
+      <figure>
+        <div className='w-full h-full'>
+          <img src={thumbnailURL} alt={title} className='h-96 aspect-video rounded-sm ' />
         </div>
         <figcaption className='flex flex-col gap-2'>
-          <span>{title}</span>
-          <span>{username}</span>
+          <p className='text-purple-500 font-semibold'>{title}</p>
+          <p className='font-semibold text-purple-500'>Canal: <span className='text-white'>{username}</span></p>
           <Tags data={tags} />
         </figcaption>
       </figure>
