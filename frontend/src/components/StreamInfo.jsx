@@ -13,7 +13,7 @@ function StreamInfo () {
     )
   }
 
-  if (!loading) {
+  if (loading) {
     return (
       <SkeletonStreamInfo />
     )

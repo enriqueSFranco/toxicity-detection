@@ -1,11 +1,12 @@
 import { useEffect, useRef } from 'react'
 import { useChannel } from '../hooks/useChannel'
+import { getMessagesTwitchChannel } from '../services/twitch'
 import Loader from './Loader'
 
 function Form () {
   const previusSearch = useRef(null)
   const inputRef = useRef(null)
-  const { loading, checkLiveChannel } = useChannel()
+  const { loading, error, checkLiveChannel } = useChannel()
 
   useEffect(() => {
     inputRef.current.focus()
@@ -20,7 +21,12 @@ function Form () {
     if (previusSearch.current === channel) return
 
     previusSearch.current = channel
+
+    // si esta el canal esta en directo
     checkLiveChannel(channel)
+    getMessagesTwitchChannel(channel)
+      .then(response => console.log(response))
+      .catch(error => console.log(error))
   }
 
   return (
