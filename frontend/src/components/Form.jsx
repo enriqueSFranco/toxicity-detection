@@ -1,12 +1,11 @@
 import { useEffect, useRef } from 'react'
-import { useChannelContext } from '../hooks/useChannelContext'
+import { useChannel } from '../hooks/useChannel'
 import Loader from './Loader'
-import styles from '../styles/Form.module.css'
 
 function Form () {
   const previusSearch = useRef(null)
   const inputRef = useRef(null)
-  const { loading, checkLiveChannel } = useChannelContext()
+  const { loading, checkLiveChannel } = useChannel()
 
   useEffect(() => {
     inputRef.current.focus()
@@ -25,18 +24,18 @@ function Form () {
   }
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
-      <div className={styles.boxInput}>
+    <form onSubmit={handleSubmit}>
+      <div className='flex bg-secondary-gray w-full rounded-sm overflow-hidden'>
         <input
+          className='w-full outline-none text-purple-500 font-semibold p-3'
           ref={inputRef}
           type='search'
           autoComplete='off'
           id='channel'
           name='channel'
           placeholder='Buscar canal de twitch'
-          className={styles.input}
         />
-        <button className={styles.btn}>{loading ? <Loader /> : <span>Buscar</span>}</button>
+        <button className='bg-purple-500 p-3'>{loading ? <Loader /> : <span>Conectar</span>}</button>
       </div>
     </form>
 

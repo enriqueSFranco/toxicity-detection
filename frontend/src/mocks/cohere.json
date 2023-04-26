@@ -1,0 +1,66 @@
+{
+  "id": "d6c0d374-90be-4209-9f7b-f36c98353f17",
+  "classifications": [
+    {
+      "id": "b17c61fe-b81e-4a65-9e36-ea8f98a68be4",
+      "input": "this game sucks, you suck",
+      "prediction": "Toxic",
+      "confidence": 0.9717963,
+      "labels": {
+        "Benign": {
+          "confidence": 0.02820374
+        },
+        "Toxic": {
+          "confidence": 0.9717963
+        }
+      }
+    },
+    {
+      "id": "29a02766-86c3-40be-9ce5-8857bf3d785c",
+      "input": "stop being a dumbass",
+      "prediction": "Toxic",
+      "confidence": 0.98948044,
+      "labels": {
+        "Benign": {
+          "confidence": 0.010519538
+        },
+        "Toxic": {
+          "confidence": 0.98948044
+        }
+      }
+    },
+    {
+      "id": "524ea10f-6e31-44f9-b045-fbe8a32706c6",
+      "input": "Let's do this once and for all",
+      "prediction": "Benign",
+      "confidence": 0.98044896,
+      "labels": {
+        "Benign": {
+          "confidence": 0.98044896
+        },
+        "Toxic": {
+          "confidence": 0.01955101
+        }
+      }
+    },
+    {
+      "id": "d9868cb9-c77e-40a7-8072-fcb956f7bae7",
+      "input": "This is coming along nicely",
+      "prediction": "Benign",
+      "confidence": 0.99962676,
+      "labels": {
+        "Benign": {
+          "confidence": 0.99962676
+        },
+        "Toxic": {
+          "confidence": 0.0003732586
+        }
+      }
+    }
+  ],
+  "meta": {
+    "api_version": {
+      "version": "1"
+    }
+  }
+}

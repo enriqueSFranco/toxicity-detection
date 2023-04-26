@@ -4,11 +4,10 @@ import Form from './components/Form'
 import Chat from './components/Chat'
 import StreamInfo from './components/StreamInfo'
 import Footer from './components/Footer'
-import './App.css'
 
 function App () {
   return (
-    <div className='App'>
+    <div className='h-full w-screen flex flex-col justify-between gap-4 p-10'>
       <MainLayout>
         <DetailsLayout>
           <Form />

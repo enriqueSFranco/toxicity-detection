@@ -4,3 +4,8 @@ export const API = {
   CLIENT_ID_TWITCH: import.meta.env.VITE_CLIENT_ID_TWITCH,
   TOKEN_TWITCH: import.meta.env.VITE_ACCESS_TOKEN
 }
+
+export const PREDICTION = {
+  Toxic: 'Toxic',
+  Benign: 'Benign'
+}
