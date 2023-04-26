@@ -1,7 +1,7 @@
 function Footer () {
   return (
-    <footer style={{ backgroundColor: '#38bdf833', height: '100px', display: 'grid', placeItems: 'center' }}>
-      <p>coded with 💙 by <a style={{ color: '#38BDF8' }} href='https://github.com/enriqueSFranco' target='_blank' rel='noreferrer'>@enriqueSFranco</a></p>
+    <footer className='bg-secondary-gray h-24 grid place-items-center'>
+      <p className='text-lg'>coded with 💜 by <a href='https://github.com/enriqueSFranco' target='_blank' rel='noreferrer' className='text-purple-500'>@enriqueSFranco</a></p>
     </footer>
   )
 }

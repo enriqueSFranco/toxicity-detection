@@ -1,7 +1,5 @@
-import styles from '../styles/Chip.module.css'
-
 function Chip ({ text }) {
-  return <span className={styles.chip}>{text}</span>
+  return <span className='bg-purple-500 py-1 px-2 rounded-sm'>{text}</span>
 }
 
 export default Chip

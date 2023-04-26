@@ -1,10 +1,8 @@
-import styles from '../styles/DetailsLayout.module.css'
-
 function DetailsLayout ({ children }) {
   return (
-    <article className={styles.container}>
+    <div className='w-full h-full flex flex-col'>
       {children}
-    </article>
+    </div>
   )
 }
 
