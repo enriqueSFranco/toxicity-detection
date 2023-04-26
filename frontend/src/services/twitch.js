@@ -8,7 +8,6 @@ export async function isChannelLive ({ channel }) {
         Authorization: `Bearer ${API.TOKEN_TWITCH}`
       }
     }
-    /* const url = `https://api.twitch.tv/helix/streams?user_login=${channel}` */
     const url = new URL(API.URL_STREAMS_TWITCH)
     url.searchParams.set('user_login', channel)
     const response = await fetch(url, options)
@@ -24,7 +23,7 @@ export async function isChannelLive ({ channel }) {
     const json = await response.json()
 
     if (json.data.length === 0) {
-      throw new Error(`El canal ${channel} no está en vivo`)
+      throw new Error(`El canal ${channel} no está en directo`)
     }
     return json
   } catch (error) {

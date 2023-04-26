@@ -1,59 +1,263 @@
 {
-  "id": "d6c0d374-90be-4209-9f7b-f36c98353f17",
+  "id": "47da10ee-65a7-41d4-bd5c-e277ad5a43dd",
   "classifications": [
     {
-      "id": "b17c61fe-b81e-4a65-9e36-ea8f98a68be4",
-      "input": "this game sucks, you suck",
-      "prediction": "Toxic",
-      "confidence": 0.9717963,
+      "id": "1d32e014-ae2a-446c-9786-bc55e49ec1d7",
+      "input": "Esto se subira a YouTube?",
+      "prediction": "good",
+      "confidence": 0.9967147,
       "labels": {
-        "Benign": {
-          "confidence": 0.02820374
+        "bueno": {
+          "confidence": 0.0017183033
         },
-        "Toxic": {
-          "confidence": 0.9717963
+        "good": {
+          "confidence": 0.9967147
+        },
+        "toxic": {
+          "confidence": 0.0014195268
+        },
+        "toxico": {
+          "confidence": 0.00014746557
         }
       }
     },
     {
-      "id": "29a02766-86c3-40be-9ce5-8857bf3d785c",
-      "input": "stop being a dumbass",
-      "prediction": "Toxic",
-      "confidence": 0.98948044,
+      "id": "dcabbbfc-eb7a-4505-9305-2487c01c74a1",
+      "input": "mouredevGitHub Sígueme en GitHub y visita los repositorios de apps y retos de código: https://github.com/mouredev. Y si te gusta lo que hago nomíname a GitHub Star ★ https://stars.github.com/nominate",
+      "prediction": "good",
+      "confidence": 0.68402284,
       "labels": {
-        "Benign": {
-          "confidence": 0.010519538
+        "bueno": {
+          "confidence": 0.3069246
         },
-        "Toxic": {
-          "confidence": 0.98948044
+        "good": {
+          "confidence": 0.68402284
+        },
+        "toxic": {
+          "confidence": 0.0016804687
+        },
+        "toxico": {
+          "confidence": 0.007372087
         }
       }
     },
     {
-      "id": "524ea10f-6e31-44f9-b045-fbe8a32706c6",
-      "input": "Let's do this once and for all",
-      "prediction": "Benign",
-      "confidence": 0.98044896,
+      "id": "b67b3b38-f827-423f-aa74-a8c5581be863",
+      "input": "Hola. FutureMan",
+      "prediction": "bueno",
+      "confidence": 0.9343947,
       "labels": {
-        "Benign": {
-          "confidence": 0.98044896
+        "bueno": {
+          "confidence": 0.9343947
         },
-        "Toxic": {
-          "confidence": 0.01955101
+        "good": {
+          "confidence": 0.051758654
+        },
+        "toxic": {
+          "confidence": 0.0019752705
+        },
+        "toxico": {
+          "confidence": 0.011871336
         }
       }
     },
     {
-      "id": "d9868cb9-c77e-40a7-8072-fcb956f7bae7",
-      "input": "This is coming along nicely",
-      "prediction": "Benign",
-      "confidence": 0.99962676,
+      "id": "e1716686-2633-43d5-90ea-321d297f0955",
+      "input": "Wow tengo un mac catalina creo q este dato es la solucion a mi problema con xcode",
+      "prediction": "bueno",
+      "confidence": 0.5806356,
       "labels": {
-        "Benign": {
-          "confidence": 0.99962676
+        "bueno": {
+          "confidence": 0.5806356
         },
-        "Toxic": {
-          "confidence": 0.0003732586
+        "good": {
+          "confidence": 0.3926458
+        },
+        "toxic": {
+          "confidence": 0.0069277696
+        },
+        "toxico": {
+          "confidence": 0.019790815
+        }
+      }
+    },
+    {
+      "id": "80c07726-f4dc-45d1-8c2d-cc7daad4c2be",
+      "input": "te puedo preguntar algo ? no me anda tailwindscss , me pide algo en postcss config y no se que poner",
+      "prediction": "bueno",
+      "confidence": 0.526837,
+      "labels": {
+        "bueno": {
+          "confidence": 0.526837
+        },
+        "good": {
+          "confidence": 0.4634703
+        },
+        "toxic": {
+          "confidence": 0.001150095
+        },
+        "toxico": {
+          "confidence": 0.008542635
+        }
+      }
+    },
+    {
+      "id": "b2f3c3cf-10c0-48f6-8c77-fc55243ad1ea",
+      "input": "Y como creo apps para android desde android",
+      "prediction": "bueno",
+      "confidence": 0.7587287,
+      "labels": {
+        "bueno": {
+          "confidence": 0.7587287
+        },
+        "good": {
+          "confidence": 0.23624554
+        },
+        "toxic": {
+          "confidence": 0.003961203
+        },
+        "toxico": {
+          "confidence": 0.0010645848
+        }
+      }
+    },
+    {
+      "id": "4a9655f5-e38c-4afd-b0bc-c4df8990a3c5",
+      "input": "@carolina_char Cuál es tu problema con Xcode?",
+      "prediction": "good",
+      "confidence": 0.5305895,
+      "labels": {
+        "bueno": {
+          "confidence": 0.3517637
+        },
+        "good": {
+          "confidence": 0.5305895
+        },
+        "toxic": {
+          "confidence": 0.004842765
+        },
+        "toxico": {
+          "confidence": 0.112804025
+        }
+      }
+    },
+    {
+      "id": "60039c60-10f6-43f4-b17d-d013ede327a1",
+      "input": "esta pobre e valoracion",
+      "prediction": "good",
+      "confidence": 0.61493236,
+      "labels": {
+        "bueno": {
+          "confidence": 0.082519
+        },
+        "good": {
+          "confidence": 0.61493236
+        },
+        "toxic": {
+          "confidence": 0.060224243
+        },
+        "toxico": {
+          "confidence": 0.24232443
+        }
+      }
+    },
+    {
+      "id": "c945bb60-5364-43ed-9b1a-c38f5067f550",
+      "input": "@mordorjs Se queda en Twitch grabado 2 meses y luego lo sube a YouTube, igual Brais tiene cursos de Swift en YouTube y en Udemy 😊",
+      "prediction": "good",
+      "confidence": 0.9927273,
+      "labels": {
+        "bueno": {
+          "confidence": 0.0020936828
+        },
+        "good": {
+          "confidence": 0.9927273
+        },
+        "toxic": {
+          "confidence": 0.004718239
+        },
+        "toxico": {
+          "confidence": 0.0004607929
+        }
+      }
+    },
+    {
+      "id": "5e0b32d2-f8d2-47a1-bed4-8a127181f367",
+      "input": "Buenas tardes!!!",
+      "prediction": "bueno",
+      "confidence": 0.9991879,
+      "labels": {
+        "bueno": {
+          "confidence": 0.9991879
+        },
+        "good": {
+          "confidence": 0.0004409367
+        },
+        "toxic": {
+          "confidence": 0.00021607945
+        },
+        "toxico": {
+          "confidence": 0.00015507771
+        }
+      }
+    },
+    {
+      "id": "13c6d633-6ef7-44cb-a432-b17be9a760b0",
+      "input": "@MetalAnkle Muchas gracias!",
+      "prediction": "bueno",
+      "confidence": 0.7824665,
+      "labels": {
+        "bueno": {
+          "confidence": 0.7824665
+        },
+        "good": {
+          "confidence": 0.21254861
+        },
+        "toxic": {
+          "confidence": 0.00029490195
+        },
+        "toxico": {
+          "confidence": 0.0046900376
+        }
+      }
+    },
+    {
+      "id": "aaa87b96-de5f-45ed-b109-56e0e0dfe73f",
+      "input": "Ojo @MoureDev  Swift Playground solo funciona con iPadOs 13 en adelante. y se tendra la version de swift 5.4 y los iPad que tengan iPasOS 16 tendrán Swift 5.8",
+      "prediction": "good",
+      "confidence": 0.5576144,
+      "labels": {
+        "bueno": {
+          "confidence": 0.40189114
+        },
+        "good": {
+          "confidence": 0.5576144
+        },
+        "toxic": {
+          "confidence": 0.019565936
+        },
+        "toxico": {
+          "confidence": 0.020928562
+        }
+      }
+    },
+    {
+      "id": "eb7dc568-6b62-4a69-90a7-f931aa0d8690",
+      "input": "Hola?",
+      "prediction": "bueno",
+      "confidence": 0.90902007,
+      "labels": {
+        "bueno": {
+          "confidence": 0.90902007
+        },
+        "good": {
+          "confidence": 0.078447126
+        },
+        "toxic": {
+          "confidence": 0.0045730383
+        },
+        "toxico": {
+          "confidence": 0.007959793
         }
       }
     }

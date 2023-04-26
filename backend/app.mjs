@@ -38,7 +38,7 @@ app.post('/channel', (req, res) => {
   client.connect();
   client.on('message', (channel, tags, message, self) => {
     console.log(message)
-    io.emit('message', { username: tags.username, message, color: tags.color })
+    io.emit('message', { username: tags.username, message, color: tags.color, avatar: tags['user-id'] })
   })
   res.status(200).send(`Canal configurado: ${channel}`);
 })
