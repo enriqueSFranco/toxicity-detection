@@ -11,27 +11,21 @@ const { classifications } = api
 function Chat () {
   const { channel } = useChannel()
   const data = useTwitchChat(channel)
-  const [toxicity, setToxicity] = useState([])
+  /* const [toxicity, setToxicity] = useState([]) */
 
   useEffect(() => {
     const messages = data.map(({ message }) => message)
     if (messages.length === 0) return
     console.log(messages)
-    toxicityDetection({ messages })
+    /* toxicityDetection({ messages })
       .then(response => {
         const { classifications } = response
         setToxicity(classifications)
       })
-      .catch(err => console.error(err))
+      .catch(err => console.error(err)) */
   }, [data])
 
-  if (!data.length) {
-    return (
-      <section>
-        <h1>Busca un canal y ve que tan saludable es su comunidad</h1>
-      </section>
-    )
-  }
+  if (!data.length) return null
 
   return (
     <section className='bg-secondary-gray w-full h-full overflow-auto p-4 rounded-sm'>

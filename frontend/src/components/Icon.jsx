@@ -5,3 +5,22 @@ export function IconTwitch () {
     </svg>
   )
 }
+
+export function IconFace () {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='150'
+      height='150'
+      fill='none'
+      viewBox='0 0 24 24'
+    >
+      <path
+        stroke='#8D9CB1'
+        strokeLinecap='round'
+        strokeWidth='2'
+        d='M8.976 21C4.055 21 3 19.945 3 15.024m18 0C21 19.945 19.945 21 15.024 21m0-18C19.945 3 21 4.055 21 8.976M8 16a4.993 4.993 0 014-2c1.636 0 3.088.786 4 2m-7-5.989V10m6 .011V10M3 8.976C3 4.055 4.055 3 8.976 3'
+      />
+    </svg>
+  )
+}
