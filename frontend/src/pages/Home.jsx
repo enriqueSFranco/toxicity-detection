@@ -6,7 +6,7 @@ import Chat from '../components/Chat'
 
 const Home = () => {
   return (
-    <main className='h-full w-full flex flex-col items-center gap-4 p-10 relative bg-primary-blue'>
+    <main className='h-full w-full flex flex-col items-center gap-4 p-10 bg-white'>
       <ChannelProvider>
         <Form />
         <DetailsLayout>

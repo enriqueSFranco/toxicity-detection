@@ -27,10 +27,10 @@ function Form () {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='w-1/2'>
+    <form onSubmit={handleSubmit} className='w-1/2 relative'>
       <div className='flex w-full rounded-sm overflow-hidden'>
         <input
-          className='w-full outline-none text-secondary-gray font-semibold p-3 bg-primaty-gray placeholder:text-secondary-gray'
+          className='w-full outline-none text-secondary-gray font-semibold p-3 bg-white placeholder:text-secondary-gray'
           ref={inputRef}
           type='search'
           autoComplete='off'
