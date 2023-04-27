@@ -8,7 +8,7 @@ function StreamInfo () {
   if (error) {
     return (
       <div className='bg-purple-500 my-4 p-4 grid place-content-center'>
-        <p className='text-lg'>{error} 🫤</p>
+        <p className='text-lg'>{JSON.stringify(error, null, ' ')} 🫤</p>
       </div>
     )
   }

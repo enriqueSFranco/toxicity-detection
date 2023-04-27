@@ -23,14 +23,14 @@ export function ChannelProvider ({ children }) {
       .finally(() => setLoading(false))
   }
 
-  function handleCheckLiveChannel (channel) {
+  function verifyTwitchChannel (channel) {
     setChannel(channel)
     console.log('buscando ', channel)
     checkLiveChannel(channel)
     getMessagesTwitchChannel(channel)
   }
 
-  const value = { channel, response, error, loading, checkLiveChannel, handleCheckLiveChannel }
+  const value = { channel, response, error, loading, verifyTwitchChannel }
   return (
     <ChannelContext.Provider value={value}>
       {children}

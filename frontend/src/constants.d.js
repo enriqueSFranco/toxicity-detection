@@ -7,6 +7,6 @@ export const API = {
 }
 
 export const PREDICTION = {
-  Toxic: 'Toxic',
-  Benign: 'Benign'
+  Good: 'good',
+  Toxic: 'toxic'
 }
