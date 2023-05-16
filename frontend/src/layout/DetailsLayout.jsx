@@ -1,6 +1,6 @@
 function DetailsLayout ({ children }) {
   return (
-    <div className='w-2/3 h-full grid grid-cols-2 gap-4'>
+    <div className='w-full h-full flex justify-between gap-10 z-10'>
       {children}
     </div>
   )

@@ -18,12 +18,11 @@ function StreamInfo () {
   return (
     <section className='w-fullw h-full'>
       <figure className='flex flex-col gap-6'>
-        <div className='h-full shadow-lg shadow-twitch-color overflow-hidden rounded-sm'>
+        <div className='h-full  overflow-hidden rounded-sm'>
           <img src={thumbnailURL} alt={title} className='w-full aspect-video' />
         </div>
-        <figcaption className='flex flex-col gap-2'>
-          <p className='text-twitch-color font-semibold'>Titulo del directo: {title}</p>
-          <p className='font-semibold text-twitch-color'>Canal:{username}</p>
+        <figcaption className='flex flex-col gap-4'>
+          <p className='text-white font-semibold'><span className='font-semibold text-twitch-color'>{username}</span>: {title}</p>
           <Tags data={tags} />
         </figcaption>
       </figure>

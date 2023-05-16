@@ -21,13 +21,12 @@ function Form () {
 
     previusSearch.current = channel // si la busqueda es diferente a la anterior buscamos el canal
 
-    console.log(previusSearch.current, channel)
     // si esta el canal esta en directo
     verifyTwitchChannel(channel)
   }
 
   return (
-    <form onSubmit={handleSubmit} className='w-2/3 relative'>
+    <form onSubmit={handleSubmit} className='w-full relative'>
       <div className='flex w-full rounded-sm overflow-hidden'>
         <input
           className='w-full outline-none text-secondary-gray font-semibold p-3 bg-primary-blue placeholder:text-secondary-gray'

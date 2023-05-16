@@ -13,7 +13,7 @@ function Tags ({ data, loading }) {
     )
   }
   return (
-    <ul className='flex flex-wrap gap-2'>
+    <ul className='flex flex-wrap gap-3'>
       {data.map(tag => (
         <li key={`tag-id-${tag}`}>
           <Chip text={tag} />
