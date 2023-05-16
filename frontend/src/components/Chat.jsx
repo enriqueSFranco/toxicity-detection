@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTwitchChat, useChannel } from '../hooks'
 import { toxicityDetection } from '../services/cohere'
-import { PREDICTION } from '../constants.d'
+import { PREDICTION } from '../share/constants.d'
 import { uuid } from '../utils/uuid'
 import Message from './Message'
 import api from '../mocks/cohere.json'
@@ -28,13 +28,13 @@ function Chat () {
   if (!data.length) return null
 
   return (
-    <section className='bg-secondary-gray w-full h-full overflow-auto p-4 rounded-sm'>
-      <div className='flex flex-col gap-5'>
+    <section className='overflow-y-auto rounded-sm'>
+      <div className='flex flex-col gap-5 h-52'>
         {data.map(({ username, message, color }) => (
           <Message
             key={`message_id-${uuid()}`}
             username={username}
-            color={color ?? '#a96fff'}
+            color={color ?? 'twitch-color'}
             message={message}
           />
         ))}

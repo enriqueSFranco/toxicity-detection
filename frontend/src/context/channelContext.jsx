@@ -4,33 +4,30 @@ import { isChannelLive, getMessagesTwitchChannel } from '../services/twitch'
 export const ChannelContext = createContext()
 
 export function ChannelProvider ({ children }) {
-  const [response, setResponse] = useState([])
+  const [streamData, updateStreamData] = useState([])
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(false)
-  const [channel, setChannel] = useState('')
 
   function checkLiveChannel (channel) {
     setLoading(true)
     isChannelLive({ channel })
       .then(response => {
-        setResponse(response)
+        updateStreamData(response)
         setError(null)
       })
       .catch((error) => {
         setError(error.message)
-        setResponse(null)
+        updateStreamData(null)
       })
       .finally(() => setLoading(false))
   }
 
   function verifyTwitchChannel (channel) {
-    setChannel(channel)
-    console.log('buscando ', channel)
     checkLiveChannel(channel)
     getMessagesTwitchChannel(channel)
   }
 
-  const value = { channel, response, error, loading, verifyTwitchChannel }
+  const value = { streamData, error, loading, verifyTwitchChannel }
   return (
     <ChannelContext.Provider value={value}>
       {children}

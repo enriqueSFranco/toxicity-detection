@@ -1,19 +1,11 @@
-import { ChannelProvider } from '../context/channelContext'
 import Form from '../components/Form'
-import DetailsLayout from '../layout/DetailsLayout'
-import StreamInfo from '../components/StreamInfo'
-import Chat from '../components/Chat'
+import StreamSection from './StreamSection'
 
 const Home = () => {
   return (
-    <main className='h-full w-full flex flex-col items-center gap-4 p-10 bg-white'>
-      <ChannelProvider>
-        <Form />
-        <DetailsLayout>
-          <StreamInfo />
-          <Chat />
-        </DetailsLayout>
-      </ChannelProvider>
+    <main className='container w-2/3 h-full flex flex-col items-center gap-4'>
+      <Form />
+      <StreamSection />
     </main>
   )
 }
