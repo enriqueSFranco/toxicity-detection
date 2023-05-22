@@ -4,30 +4,30 @@ import { isChannelLive, getMessagesTwitchChannel } from '../services/twitch'
 export const ChannelContext = createContext()
 
 export function ChannelProvider ({ children }) {
-  const [streamData, updateStreamData] = useState([])
+  const [streamData, updateStreamData] = useState({})
   const [error, setError] = useState(null)
-  const [loading, setLoading] = useState(false)
+  const [loadingMessages, updateLoadingMessages] = useState(false)
+  const [loading, updateLoading] = useState(false)
 
-  function checkLiveChannel (channel) {
-    setLoading(true)
+  function checkChannel (channel) {
+    updateLoading(true)
     isChannelLive({ channel })
       .then(response => {
+        console.log(response)
         updateStreamData(response)
-        setError(null)
+        if (Object.entries(response).length > 0) {
+          updateLoadingMessages(true)
+          getMessagesTwitchChannel(channel)
+            .then(response => console.log(response))
+            .catch(error => console.error(error))
+            .finally(() => updateLoadingMessages(false))
+        }
       })
-      .catch((error) => {
-        setError(error.message)
-        updateStreamData(null)
-      })
-      .finally(() => setLoading(false))
+      .catch(error => setError(error))
+      .finally(() => updateLoading(false))
   }
 
-  function verifyTwitchChannel (channel) {
-    checkLiveChannel(channel)
-    getMessagesTwitchChannel(channel)
-  }
-
-  const value = { streamData, error, loading, verifyTwitchChannel }
+  const value = { streamData, error, loading, loadingMessages, checkChannel }
   return (
     <ChannelContext.Provider value={value}>
       {children}
