@@ -5,7 +5,7 @@ import Loader from './Loader'
 function Form () {
   const previusSearch = useRef(null)
   const inputRef = useRef(null)
-  const { loading, verifyTwitchChannel } = useChannel()
+  const { loading, checkChannel } = useChannel()
 
   useEffect(() => {
     inputRef.current.focus()
@@ -21,15 +21,14 @@ function Form () {
 
     previusSearch.current = channel // si la busqueda es diferente a la anterior buscamos el canal
 
-    // si esta el canal esta en directo
-    verifyTwitchChannel(channel)
+    checkChannel(channel)
   }
 
   return (
-    <form onSubmit={handleSubmit} className='w-full relative'>
+    <form onSubmit={handleSubmit} className='max-sm:w-full w-2/3 relative'>
       <div className='flex w-full rounded-sm overflow-hidden'>
         <input
-          className='w-full outline-none text-secondary-gray font-semibold p-3 bg-primary-blue placeholder:text-secondary-gray'
+          className='w-full outline-none text-secondary-gray font-semibold max-sm:font-light p-3 bg-primary-blue placeholder:text-secondary-gray'
           ref={inputRef}
           type='search'
           autoComplete='off'
