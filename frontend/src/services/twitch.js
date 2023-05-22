@@ -1,4 +1,10 @@
-import { API } from '../constants.d'
+import { API } from '../share/constants.d'
+
+function buildStreamURL (channel) {
+  const url = new URL(API.URL_STREAMS_TWITCH)
+  url.searchParams.set('user_login', channel)
+  return url
+}
 
 export async function isChannelLive ({ channel }) {
   try {
@@ -8,8 +14,7 @@ export async function isChannelLive ({ channel }) {
         Authorization: `Bearer ${API.TOKEN_TWITCH}`
       }
     }
-    const url = new URL(API.URL_STREAMS_TWITCH)
-    url.searchParams.set('user_login', channel)
+    const url = buildStreamURL(channel)
     const response = await fetch(url, options)
 
     if (!response.ok) {
@@ -21,16 +26,10 @@ export async function isChannelLive ({ channel }) {
       throw error
     }
     const json = await response.json()
-
-    if (json.data.length === 0) {
-      throw new Error(`El canal ${channel} no está en directo`)
-    }
     return json
   } catch (error) {
     if (error.status === 400) {
       throw new Error(`El canal ${channel} no existe`)
-    } else {
-      throw error
     }
   }
 }
@@ -45,8 +44,8 @@ export async function getMessagesTwitchChannel (channel) {
       body: JSON.stringify({ channel })
     }
 
+    console.log('👉', API.URL_CHANNEL_TWITCH)
     const response = await fetch(`${API.URL_CHANNEL_TWITCH}`, options)
-    console.log(API.URL_CHANNEL_TWITCH)
 
     if (!response.ok) {
       const error = {
@@ -56,8 +55,7 @@ export async function getMessagesTwitchChannel (channel) {
       }
       throw error
     }
-    const json = await response.text()
-    console.log(json)
+    const json = await response.json()
     return json
   } catch (error) {
     if (error.status === 400) {

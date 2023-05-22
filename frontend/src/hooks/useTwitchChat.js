@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import io from 'socket.io-client'
 
-export function useTwitchChat (channel) {
+export function useTwitchChat () {
   const [data, setData] = useState([])
 
   useEffect(() => {
@@ -9,12 +9,7 @@ export function useTwitchChat (channel) {
     socket.on('message', (data) => {
       setData(prevMessages => [...prevMessages, data])
     })
-
-    return () => {
-      socket.emit('leave', channel)
-      socket.disconnect()
-    }
-  }, [channel])
+  }, [])
 
   return data
 }

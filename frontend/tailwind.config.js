@@ -7,7 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'secondary-gray': '#3D3D40'
+        'primary-blue': '#151934',
+        'secondary-blue': '#34B3ED',
+        'primaty-gray': '#1E293B',
+        'secondary-gray': '#8D9CB1',
+        'twitch-color': '#9146FF'
       }
     }
   },

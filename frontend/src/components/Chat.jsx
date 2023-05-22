@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTwitchChat, useChannel } from '../hooks'
 import { toxicityDetection } from '../services/cohere'
-import { PREDICTION } from '../constants.d'
+import { PREDICTION } from '../share/constants.d'
 import { uuid } from '../utils/uuid'
 import Message from './Message'
 import api from '../mocks/cohere.json'
@@ -11,7 +11,7 @@ const { classifications } = api
 function Chat () {
   const { channel } = useChannel()
   const data = useTwitchChat(channel)
-  const [messages, setMessages] = useState([])
+  /* const [toxicity, setToxicity] = useState([]) */
 
   useEffect(() => {
     const messages = data.map(({ message }) => message)
@@ -20,36 +20,34 @@ function Chat () {
     /* toxicityDetection({ messages })
       .then(response => {
         const { classifications } = response
-        setMessages(classifications)
+        setToxicity(classifications)
       })
       .catch(err => console.error(err)) */
   }, [data])
 
+  if (!data.length) return null
+
   return (
-    <section className='bg-secondary-gray w-full h-full overflow-auto p-4 rounded-sm'>
-      <ul>
+    <section className='overflow-y-auto rounded-sm'>
+      <div className='flex flex-col gap-5 h-52'>
         {data.map(({ username, message, color }) => (
-          <li key={`message_id-${uuid()}`}>
-            <Message
-              username={username}
-              color={color ?? '#a96fff'}
-              message={message}
-            />
-          </li>
+          <Message
+            key={`message_id-${uuid()}`}
+            username={username}
+            color={color ?? 'twitch-color'}
+            message={message}
+          />
         ))}
         {/* {
-          classifications.map(({ id, input, prediction }) => {
+          toxicity.map(({ id, prediction }) => {
             const emojiPrediction = prediction === PREDICTION.Toxic ? '🤬' : '😄'
             const colorPrediction = prediction === PREDICTION.Toxic ? 'bg-orange-500' : 'bg-emerald-600'
             return (
-              <div key={id} className=''>
-                <span className={`${colorPrediction} flex justify-center items-center h-7 w-7 rounded-full`}>{emojiPrediction}</span>
-                <p>{input}</p>
-              </div>
+              <span key={id} className={`${colorPrediction} flex justify-center items-center h-7 w-7 rounded-full`}>{emojiPrediction}</span>
             )
           })
         } */}
-      </ul>
+      </div>
     </section>
   )
 }
