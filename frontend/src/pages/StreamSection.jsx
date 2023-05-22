@@ -6,7 +6,8 @@ import Chat from '../components/Chat'
 
 const StreamSection = () => {
   const { streamData } = useChannel()
-  const hasStreamData = streamData.length > 0
+  const hasStreamData = Object.keys(streamData).length > 0
+
   return (
     <>
       {!hasStreamData && <NoStreamSection />}

@@ -5,7 +5,7 @@ import StreamSection from './StreamSection'
 
 const Home = () => {
   return (
-    <main className='container w-2/3 h-full flex flex-col items-center gap-4'>
+    <main className='max-sm:w-full container w-2/3 h-full flex flex-col items-center gap-4'>
       <Form />
       <ErrorBoundary fallback={<ErrorMessage />}>
         <StreamSection />
