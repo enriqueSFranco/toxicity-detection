@@ -4,7 +4,10 @@ import { isChannelLive, getMessagesTwitchChannel } from '../services/twitch'
 export const ChannelContext = createContext()
 
 export function ChannelProvider ({ children }) {
-  const [streamData, updateStreamData] = useState({})
+  const [streamData, updateStreamData] = useState({
+    channel: null,
+    messages: null
+  })
   const [error, setError] = useState(null)
   const [loadingMessages, updateLoadingMessages] = useState(false)
   const [loading, updateLoading] = useState(false)
@@ -12,13 +15,12 @@ export function ChannelProvider ({ children }) {
   function checkChannel (channel) {
     updateLoading(true)
     isChannelLive({ channel })
-      .then(response => {
-        console.log(response)
-        updateStreamData(response)
-        if (Object.entries(response).length > 0) {
+      .then(channelResponse => {
+        updateStreamData(prevState => ({ ...prevState, channel: channelResponse }))
+        if (Object.entries(channelResponse).length > 0) {
           updateLoadingMessages(true)
           getMessagesTwitchChannel(channel)
-            .then(response => console.log(response))
+            .then(messageResponse => updateStreamData(prevState => ({ ...prevState, messages: messageResponse })))
             .catch(error => console.error(error))
             .finally(() => updateLoadingMessages(false))
         }
