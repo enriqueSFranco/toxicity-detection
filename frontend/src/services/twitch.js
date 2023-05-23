@@ -44,7 +44,6 @@ export async function getMessagesTwitchChannel (channel) {
       body: JSON.stringify({ channel })
     }
 
-    console.log('👉', API.URL_CHANNEL_TWITCH)
     const response = await fetch(`${API.URL_CHANNEL_TWITCH}`, options)
 
     if (!response.ok) {
