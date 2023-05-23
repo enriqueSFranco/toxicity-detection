@@ -1,40 +1,28 @@
 import { useChannel } from '../hooks/useChannel'
 import Tags from './Tags'
 import SkeletonStreamInfo from './SkeletonStreamInfo'
+import Error from './Error'
 
 function StreamInfo () {
-  const { response: streamData, error, loading } = useChannel()
+  const { streamData, error, loading } = useChannel()
 
-  if (error) {
-    return (
-      <div className='bg-purple-500 my-4 p-4 grid place-content-center'>
-        <p className='text-lg'>{error} 🫤</p>
-      </div>
-    )
-  }
+  if (error) return <Error error={error} />
 
-  if (loading) {
-    return (
-      <SkeletonStreamInfo />
-    )
-  }
-
-  if (!streamData || streamData.length === 0) return null
+  if (loading) return <SkeletonStreamInfo />
 
   const { data } = streamData
 
   const { tags, user_name: username, thumbnail_url: thumbnail, title } = data[0]
-  const thumbnailURL = thumbnail.replace('{width}', '1080').replace('{height}', '1080')
+  const thumbnailURL = thumbnail.replace('{width}', '600').replace('{height}', '600')
 
   return (
-    <section className='my-4 w-full h-full'>
-      <figure>
-        <div className='w-full h-full'>
-          <img src={thumbnailURL} alt={title} className='h-96 aspect-video rounded-sm ' />
+    <section className='w-fullw h-full'>
+      <figure className='flex flex-col gap-6'>
+        <div className='h-full  overflow-hidden rounded-sm'>
+          <img src={thumbnailURL} alt={title} className='w-full aspect-video' />
         </div>
-        <figcaption className='flex flex-col gap-2'>
-          <p className='text-purple-500 font-semibold'>{title}</p>
-          <p className='font-semibold text-purple-500'>Canal: <span className='text-white'>{username}</span></p>
+        <figcaption className='flex flex-col gap-4'>
+          <p className='text-white font-semibold'><span className='font-semibold text-twitch-color'>{username}</span>: {title}</p>
           <Tags data={tags} />
         </figcaption>
       </figure>

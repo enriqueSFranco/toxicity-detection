@@ -40,7 +40,7 @@ app.post('/channel', (req, res) => {
     console.log(message)
     io.emit('message', { username: tags.username, message, color: tags.color, avatar: tags['user-id'] })
   })
-  res.status(200).send(`Canal configurado: ${channel}`);
+  res.status(200).json({ message: `Canal configurado: ${channel}` });
 })
 
 
