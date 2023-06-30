@@ -10,7 +10,7 @@ const StreamSection = () => {
 
   return (
     <>
-      {!hasStreamData && <NoStreamSection />}
+      {/* {!hasStreamData && <NoStreamSection />} */}
       {hasStreamData && (
         <DetailsLayout>
           <StreamInfo />
