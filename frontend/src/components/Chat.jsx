@@ -9,14 +9,13 @@ import api from '../mocks/cohere.json'
 const { classifications } = api
 
 function Chat () {
-  const { channel } = useChannel()
-  const data = useTwitchChat(channel)
+  const { streamData } = useChannel()
+  const data = useTwitchChat(streamData.messages)
   /* const [toxicity, setToxicity] = useState([]) */
 
   useEffect(() => {
     const messages = data.map(({ message }) => message)
     if (messages.length === 0) return
-    console.log(messages)
     /* toxicityDetection({ messages })
       .then(response => {
         const { classifications } = response
@@ -34,8 +33,9 @@ function Chat () {
           <Message
             key={`message_id-${uuid()}`}
             username={username}
-            color={color ?? 'twitch-color'}
+            color={color}
             message={message}
+            prediction={false}
           />
         ))}
         {/* {
