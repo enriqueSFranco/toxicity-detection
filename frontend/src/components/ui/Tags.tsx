@@ -18,7 +18,7 @@ function Tags ({ data, loading = false }: Props) {
   //   )
   // }
   return (
-    <ul className='flex flex-wrap gap-3'>
+    <ul className='flex flex-wrap gap-2'>
       {data.map(tag => (
         <li key={`tag-id-${tag}`}>
           <Chip text={tag} />
