@@ -1,12 +1,10 @@
-import AppLayout from './layout/AppLayout'
-import Header from './components/Header'
+import AppLayout from './layout/Layout'
 import Home from './pages/Home'
 import Footer from './components/Footer'
 
 function App () {
   return (
     <AppLayout>
-      <Header />
       <Home />
       <Footer />
     </AppLayout>

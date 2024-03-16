@@ -4,7 +4,9 @@ import App from './App'
 import { ChannelProvider } from './context/channelContext'
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const $app = document.getElementById('root') as HTMLElement
+
+ReactDOM.createRoot($app).render(
   <React.StrictMode>
     <ChannelProvider>
       <App />
