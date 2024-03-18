@@ -25,10 +25,10 @@ function Form () {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='w-1/3 relative'>
-      <div className='flex w-full rounded-sm overflow-hidden border border-white/80'>
+    <form onSubmit={handleSubmit} className='w-1/2 relative'>
+      <div className='flex rounded-md overflow-hidden border border-white/35 bg-black p-2'>
         <input
-          className='w-full outline-none text-secondary-gray font-semibold max-sm:font-light p-3 bg-black placeholder:text-secondary-gray'
+          className='w-full outline-none text-secondary-gray font-semibold bg-transparent placeholder:text-white/80 placeholder:tracking-[1px] placeholder:font-extralight'
           ref={inputRef}
           type='search'
           autoComplete='off'
@@ -36,7 +36,7 @@ function Form () {
           name='channel'
           placeholder='Buscar canal de twitch'
         />
-        <button className='bg-twitch-color rounded-sm p-2 grid place-items-center w-auto' aria-label='search twitch channel'>{loading ? <span className='flex items-center gap-3'><Loader />Conectando...</span> : <span className='w-24'>Buscar canal</span>}</button>
+        <button className='bg-twitch-color p-2 grid place-items-center w-auto hover:rounded-md transition-all duration-300 ease-in-out' aria-label='search twitch channel'>{loading ? <span className='flex items-center gap-3'><Loader />Conectando...</span> : <span className='w-24'>Buscar canal</span>}</button>
       </div>
     </form>
 
