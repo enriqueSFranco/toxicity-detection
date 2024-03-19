@@ -1,9 +1,9 @@
 type TwitchChannel = {
-  data: Data[];
+  data: TwitchChannelData[];
   pagination: Pagination;
 }
 
-type Data = {
+type TwitchChannelData = {
   id: string;
   user_id: string;
   user_login: string;
@@ -25,4 +25,4 @@ type Pagination = {
   cursor: string;
 }
 
-export { TwitchChannel, Data, Pagination }
+export { TwitchChannel, TwitchChannelData, Pagination }
