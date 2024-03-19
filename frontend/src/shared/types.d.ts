@@ -4,25 +4,28 @@ type TwitchChannel = {
 }
 
 type TwitchChannelData = {
-  id: string;
-  user_id: string;
-  user_login: string;
-  user_name: string;
+  broadcaster_language: string;
+  broadcaster_login: string;
+  display_name: string;
   game_id: string;
   game_name: string;
-  type: string;
-  title: string;
-  viewer_count: number;
-  started_at: Date;
-  language: string;
-  thumbnail_url: string;
+  id: string;
+  is_live: boolean;
   tag_ids: any[];
   tags: string[];
-  is_mature: boolean;
+  thumbnail_url: string;
+  title: string;
+  started_at: Date;
 }
 
-type Pagination = {
-  cursor: string;
+type Pagination = {}
+
+type Token = {
+  access_token: string,
+  refresh_token: string,
+  expires_in: number,
+  scope: string,
+  token_type: string
 }
 
-export { TwitchChannel, TwitchChannelData, Pagination }
+export { TwitchChannel, TwitchChannelData, Pagination, Token }
