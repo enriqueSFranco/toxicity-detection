@@ -1,4 +1,4 @@
-import { useChannel } from './useChannel'
+import { useTwitchSearchChannel } from './useTwitchSearchChannel'
 import { useTwitchChat } from './useTwitchChat'
 
-export { useChannel, useTwitchChat }
+export { useTwitchSearchChannel, useTwitchChat }
