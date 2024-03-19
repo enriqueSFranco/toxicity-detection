@@ -20,10 +20,9 @@ function Form () {
     const channelName = field.get('channel')
 
     if (previusSearch.current === channelName || channelName === '') return // verificamos que la busqueda anterior es igual a la actual
-    console.log('canal: ', channelName)
     if (channelName instanceof String)
       previusSearch.current = channelName // si la busqueda es diferente a la anterior buscamos el canal
-
+    console.log(channelName)
     searchTwitchChannel({ channelName })
   }
 

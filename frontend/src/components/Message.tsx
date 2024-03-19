@@ -1,7 +1,7 @@
 type Props = {
   username: string
   message: string
-  color: string
+  color?: string
   prediction: boolean
 }
 

@@ -1,8 +1,8 @@
 import { useContext } from 'react'
-import { ChannelContext } from '../context/TwitchContext'
+import { TwitchSearchChannelContext } from '../context/TwitchSearchChannelContext'
 
 export function useTwitchSearchChannel () {
-  const context = useContext(ChannelContext)
+  const context = useContext(TwitchSearchChannelContext)
 
   if (context === undefined) return new Error('useChannelContext debe ser usado dentro de ChannelProvider')
 
