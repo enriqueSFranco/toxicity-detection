@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import { ChannelProvider } from './context/channelContext'
+import { TwitchProvider } from './context/TwitchContext'
 import './index.css'
 
 const $app = document.getElementById('root') as HTMLElement
 
 ReactDOM.createRoot($app).render(
   <React.StrictMode>
-    <ChannelProvider>
+    <TwitchProvider>
       <App />
-    </ChannelProvider>
+    </TwitchProvider>
   </React.StrictMode>
 )
