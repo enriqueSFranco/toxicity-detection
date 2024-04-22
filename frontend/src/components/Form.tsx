@@ -1,27 +1,29 @@
 import { useEffect, useRef } from 'react'
-import { useChannel } from '../hooks/useChannel'
+import { useTwitchSearchChannel } from '../hooks'
 import Loader from './Loader'
 
 function Form () {
-  const previusSearch = useRef(null)
-  const inputRef = useRef(null)
-  const { loading, checkChannel } = useChannel()
+  const previusSearch = useRef<string | null>(null)
+  const inputRef = useRef<HTMLInputElement | null>(null)
+  const { loading, searchTwitchChannel } = useTwitchSearchChannel()
 
   useEffect(() => {
-    inputRef.current.focus()
+    if (inputRef !== null) {
+      inputRef.current.focus()
+    }
   }, [])
 
   function handleSubmit (e) {
     e.preventDefault()
 
     const field = new FormData(e.target)
-    const channel = field.get('channel')
+    const channelName = field.get('channel')
 
-    if (previusSearch.current === channel || channel === '') return // verificamos que la busqueda anterior es igual a la actual
-
-    previusSearch.current = channel // si la busqueda es diferente a la anterior buscamos el canal
-
-    checkChannel(channel)
+    if (previusSearch.current === channelName || channelName === '') return // verificamos que la busqueda anterior es igual a la actual
+    if (channelName instanceof String)
+      previusSearch.current = channelName // si la busqueda es diferente a la anterior buscamos el canal
+    console.log(channelName)
+    searchTwitchChannel({ channelName })
   }
 
   return (
