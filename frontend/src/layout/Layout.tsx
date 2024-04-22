@@ -6,7 +6,7 @@ type Props = {
 
 function AppLayout ({ children }: Props) {
   return (
-    <div className='w-full h-screen flex flex-col items-center justify-between p-8'>
+    <div className='w-full h-screen flex flex-col items-center justify-between gap-8 p-8'>
       <Header />
       {children}
     </div>

@@ -6,29 +6,26 @@ import StreamSection from '../components/ui/StreamSection'
 
 const Home = () => {
   return (
-    <main className='w-full h-full flex flex-col items-center mt-12'>
+    <main className='w-2/3 h-full flex flex-col items-center'>
       <Form />
-      <div className='grid grid-cols-2'>
+      <div className='grid grid-cols-2 mt-9'>
         <ErrorBoundary fallback={<ErrorMessage />}>
           <StreamSection />
         </ErrorBoundary>
-        <section>
-          <h2 className='font-bold capitalize text-xl'>chat</h2>
-          <div className='bg-white/5 w-full h-full overflow-y-auto flex flex-col gap-2'>
-            <Message
-              username="kike sfranco"
-              color={"#green-800"}
-              message={"hello world"}
-              prediction={true}
-            />
+        <section className='bg-white/5 w-full h-full overflow-y-auto flex flex-col gap-2 rounded-2xl p-2'>
+          <Message
+            username="kike sfranco"
+            color={"#green-800"}
+            message={"hello world"}
+            prediction={true}
+          />
 
-            <Message
-              username="kirito"
-              color={"#green-800"}
-              message={"hi 👋"}
-              prediction={false}
-            />
-          </div>
+          <Message
+            username="kirito"
+            color={"#green-800"}
+            message={"hi 👋"}
+            prediction={false}
+          />
         </section>
       </div>
     </main>
