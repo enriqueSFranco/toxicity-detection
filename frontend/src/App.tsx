@@ -1,4 +1,4 @@
-import AppLayout from './layout/Layout'
+import AppLayout from './layouts/Layout'
 import Home from './pages/Home'
 import Footer from './components/Footer'
 

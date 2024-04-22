@@ -1,4 +1,4 @@
-import { API } from '../share/constants.d'
+import { API } from '../shared/constants'
 
 const examples = [
   {
