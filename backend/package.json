@@ -2,9 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon --watch ./app.js"
+    "start": "nodemon --env-file=.env --watch ./app.js"
   },
   "keywords": [],
   "author": "",
