@@ -1,15 +1,18 @@
+import { useEffect } from 'react'
+
 import ErrorBoundary from '../components/ErrorBoundary'
 import ErrorMessage from '../components/ErrorMessage'
 import Form from '../components/Form'
-import { StreamMessages } from '../components/ui/StreamMessages'
-import { StreamDetails } from '../components/ui/StreamDetails'
-import { useTwitchSearchChannel } from '../hooks'
+import { StreamDetails } from '../components/ui/stream-thumbnail'
+import { StreamMessages } from '../components/ui/stream-messages'
+
 
 const Home = () => {
+
   return (
-    <main className='w-2/3 h-full flex flex-col items-center'>
+    <main className='w-full flex flex-grow flex-col items-center p-4 mt-8'>
       <Form />
-      <div className='grid grid-cols-2 mt-9'>
+      <div className='w-2/3 max-h-full grid grid-cols-2 gap-10 mt-9'>
         <ErrorBoundary fallback={<ErrorMessage />}>
           <StreamDetails />
         </ErrorBoundary>

@@ -7,7 +7,7 @@ const Header = () => {
         <h2 className='text-balance font-bold text-4xl'>Detectando la toxicidad de la comunidad <span className='text-twitch-color capitalize'>twitch</span></h2>
         <IconTwitch width={60} height={60} />
       </div>
-      <p className='text-balance text-base text-white/80'> Herramienta de detección de mensajes tóxicos, podemos detectar automáticamente y destacar mensajes que contengan lenguaje ofensivo o inapropiado.</p>
+      <p className='text-balance text-base'> Herramienta de detección de mensajes tóxicos, podemos detectar automáticamente y destacar mensajes que contengan lenguaje ofensivo o inapropiado.</p>
     </header>
   )
 }
