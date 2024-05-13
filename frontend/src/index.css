@@ -45,3 +45,15 @@ ol {
   padding: 0;
   list-style: none;
 }
+
+.scrollGradient {
+  background:
+    linear-gradient(#000000 33%, rgba(0, 0, 0, 0)),
+    linear-gradient(rgba(0, 0, 0, 0), #000000 66%) 0 100%,
+    radial-gradient(farthest-side at 50% 0, rgba(122, 122, 122, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 50% 100%, rgba(122, 122, 122, 0.5), rgba(0, 0, 0, 0)) 0 100%;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-attachment: local, local, scroll, scroll;
+  background-size: 100% 45px, 100% 45px, 100% 15px, 100% 15px;
+}

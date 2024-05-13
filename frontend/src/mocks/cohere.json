@@ -4,7 +4,7 @@
     {
       "id": "1d32e014-ae2a-446c-9786-bc55e49ec1d7",
       "input": "Esto se subira a YouTube?",
-      "prediction": "good",
+      "prediction": "bueno",
       "confidence": 0.9967147,
       "labels": {
         "bueno": {
@@ -24,7 +24,7 @@
     {
       "id": "dcabbbfc-eb7a-4505-9305-2487c01c74a1",
       "input": "mouredevGitHub Sígueme en GitHub y visita los repositorios de apps y retos de código: https://github.com/mouredev. Y si te gusta lo que hago nomíname a GitHub Star ★ https://stars.github.com/nominate",
-      "prediction": "good",
+      "prediction": "bueno",
       "confidence": 0.68402284,
       "labels": {
         "bueno": {
@@ -124,7 +124,7 @@
     {
       "id": "4a9655f5-e38c-4afd-b0bc-c4df8990a3c5",
       "input": "@carolina_char Cuál es tu problema con Xcode?",
-      "prediction": "good",
+      "prediction": "bueno",
       "confidence": 0.5305895,
       "labels": {
         "bueno": {
@@ -144,7 +144,7 @@
     {
       "id": "60039c60-10f6-43f4-b17d-d013ede327a1",
       "input": "esta pobre e valoracion",
-      "prediction": "good",
+      "prediction": "bueno",
       "confidence": 0.61493236,
       "labels": {
         "bueno": {
@@ -164,7 +164,7 @@
     {
       "id": "c945bb60-5364-43ed-9b1a-c38f5067f550",
       "input": "@mordorjs Se queda en Twitch grabado 2 meses y luego lo sube a YouTube, igual Brais tiene cursos de Swift en YouTube y en Udemy 😊",
-      "prediction": "good",
+      "prediction": "bueno",
       "confidence": 0.9927273,
       "labels": {
         "bueno": {
@@ -224,7 +224,7 @@
     {
       "id": "aaa87b96-de5f-45ed-b109-56e0e0dfe73f",
       "input": "Ojo @MoureDev  Swift Playground solo funciona con iPadOs 13 en adelante. y se tendra la version de swift 5.4 y los iPad que tengan iPasOS 16 tendrán Swift 5.8",
-      "prediction": "good",
+      "prediction": "bueno",
       "confidence": 0.5576144,
       "labels": {
         "bueno": {

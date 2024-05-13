@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "broadcaster_language": "es",
+      "broadcaster_login": "afor_digital",
+      "display_name": "afor_digital",
+      "game_id": "1469308723",
+      "game_name": "Software and Game Development",
+      "id": "843314662",
+      "is_live": true,
+      "tag_ids": [],
+      "tags": [
+        "programacion",
+        "web",
+        "react",
+        "development",
+        "desarrolloweb",
+        "Español",
+        "frontend",
+        "desarrollo",
+        "diseño",
+        "tecnologia"
+      ],
+      "thumbnail_url": "https://static-cdn.jtvnw.net/jtv_user_pictures/0154f20f-f150-4437-b618-aaba9af22e71-profile_image-300x300.png",
+      "title": "SUFRIENDO CON JAVASCRIPT VANILA | DESARROLLANDO PIEDRA PAPEL TIJERAS LAGARTO SPOCK | !discord 🍒 🍒🍓🥝🍎🍄",
+      "started_at": "2024-04-23T18:46:12Z"
+    }
+  ],
+  "pagination": {}
+}

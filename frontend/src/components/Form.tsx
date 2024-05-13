@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { useTwitchSearchChannel } from '../hooks'
+import { useTwitchSearchChannel } from '../hooks/useTwitchSearchChannel'
 import Loader from './Loader'
 
 function Form () {
@@ -27,8 +27,8 @@ function Form () {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='w-1/2 relative'>
-      <div className='flex rounded-md overflow-hidden border border-white/35 bg-black p-2'>
+    <form onSubmit={handleSubmit} className='w-1/3 relative'>
+      <div className='flex rounded-md overflow-hidden border border-white/20 bg-black p-2'>
         <input
           className='w-full outline-none text-secondary-gray font-semibold bg-transparent placeholder:text-white/80 placeholder:tracking-[1px] placeholder:font-extralight'
           ref={inputRef}

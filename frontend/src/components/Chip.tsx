@@ -3,7 +3,7 @@ type Props = {
 }
 
 function Chip ({ text }: Props) {
-  return <span className="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{text}</span>
+  return <span className="inline-block bg-indigo-100 text-twitch-color text-xs font-medium px-2.5 py-1 rounded dark:bg-twitch-color/20 dark:text-twitch-color">{text}</span>
 }
 
 export default Chip
