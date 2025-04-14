@@ -1,5 +1,7 @@
 # 👾 Toxicity Detection
 
+![Preview de la aplicación](images/preview.png)
+
 **Toxicity Detection** es una aplicación web interactiva que detecta el lenguaje tóxico en tiempo real durante los **streams de Twitch**. Utilizando **React**, **TypeScript**, **TailwindCSS**, **Node.js**, y **tmi.js**, junto con el modelo de clasificación de **Cohere API**, esta herramienta ayuda a los streamers a identificar y gestionar comentarios tóxicos en sus canales para mejorar la experiencia de la comunidad.
 
 ## 🚀 Tecnologías utilizadas
