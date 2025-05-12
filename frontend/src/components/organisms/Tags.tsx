@@ -1,4 +1,4 @@
-import Chip from '../Chip'
+import Chip from '../atoms/Chip'
 
 type Props = {
   data: string[]

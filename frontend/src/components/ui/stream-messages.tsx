@@ -48,7 +48,7 @@ export function StreamMessages () {
   const receiveMessage = (message: string) => setMessages(prevMessages => [...prevMessages, message])
 
   return (
-    <div className="max-h-full h-[500px] border border-white/15 rounded px-3 py-1 overflow-auto scrollGradient">
+    <div className="max-h-full h-[500px] px-3 py-1 overflow-auto scrollGradient">
       <ul className="flex flex-col flex-wrap gap-4">
         {messages.map(message => (
           <li key={`messageId-${crypto.randomUUID()}`}>

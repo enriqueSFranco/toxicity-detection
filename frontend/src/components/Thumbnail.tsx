@@ -1,4 +1,4 @@
-import Tags from './ui/Tags'
+import Tags from './organisms/Tags'
 
 type Props = {
   src: string
