@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useTwitchSearchChannel } from '../hooks/useTwitchSearchChannel'
-import Loader from './Loader'
+import Loader from './atoms/Loader'
 
 function Form () {
   const previusSearch = useRef<string | null>(null)
@@ -27,18 +27,18 @@ function Form () {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='w-1/3 relative'>
-      <div className='flex rounded-md overflow-hidden border border-white/20 bg-black p-2'>
+    <form onSubmit={handleSubmit} className='w-1/2 relative'>
+      <div className='flex overflow-hidden outline outline-[0.5px] outline-purple-700'>
         <input
-          className='w-full outline-none text-secondary-gray font-semibold bg-transparent placeholder:text-white/80 placeholder:tracking-[1px] placeholder:font-extralight'
+          className='w-full py-4 indent-4 placeholder:text-sm outline-none text-secondary-gray font-semibold bg-transparent placeholder:text-white/80 placeholder:tracking-[1px] placeholder:font-extralight'
           ref={inputRef}
           type='search'
           autoComplete='off'
           id='channel'
           name='channel'
-          placeholder='Buscar canal de twitch'
+          placeholder='Escribe el nombre de un canal de Twitch'
         />
-        <button className='bg-twitch-color p-2 grid place-items-center w-auto hover:rounded-md transition-all duration-300 ease-in-out' aria-label='search twitch channel'>{loading ? <span className='flex items-center gap-3'><Loader />Conectando...</span> : <span className='w-24'>Buscar canal</span>}</button>
+        <button className='bg-purple-700 p-2 grid place-items-center w-auto hover:bg-twitch-color transition-all duration-300 ease-in-out' aria-label='search twitch channel'>{loading ? <span className='flex items-center gap-3'><Loader />Conectando...</span> : <span className='w-24'>Buscar</span>}</button>
       </div>
     </form>
 

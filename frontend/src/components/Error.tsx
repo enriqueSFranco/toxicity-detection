@@ -1,4 +1,4 @@
-import { IconFace } from './Icon'
+import { IconFace } from './atoms/Icon'
 
 const Error = ({ error }) => {
   return (

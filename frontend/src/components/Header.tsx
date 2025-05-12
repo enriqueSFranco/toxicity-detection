@@ -1,13 +1,9 @@
-import { IconTwitch } from './Icon'
-
+// import { IconTwitch } from './Icon'
 const Header = () => {
   return (
-    <header className='w-2/3 text-xl flex flex-col items-start tracking-[1px] font-extralight'>
-      <div className='flex gap-4'>
-        <h2 className='text-balance font-bold text-4xl'>Detectando la toxicidad de la comunidad <span className='text-twitch-color capitalize'>twitch</span></h2>
-        <IconTwitch width={60} height={60} />
-      </div>
-      <p className='text-balance text-base'> Herramienta de detección de mensajes tóxicos, podemos detectar automáticamente y destacar mensajes que contengan lenguaje ofensivo o inapropiado.</p>
+    <header className='w-full text-xl flex flex-col items-center justify-center gap-4 tracking-wide font-extralight'>
+      <h2 className='text-balance font-bold text-4xl bg-gradient-to-br from-amber-200 via-violet-600 to-sky-900 inline-block text-transparent bg-clip-text'>Menos hate, más comunidad.</h2>
+      <p className='text-balance text-base'>Una herramienta para filtrar toxicidad y resaltar lo que realmente importa.</p>
     </header>
   )
 }
